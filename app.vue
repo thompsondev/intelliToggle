@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <NuxtLayout>
     <Header />
     <Hero />
     <TrustedBy />
@@ -12,6 +12,6 @@
     <WhyTeams />
     <FinalCTA />
     <Footer />
-  </div>
+  </NuxtLayout>
 </template>
 
