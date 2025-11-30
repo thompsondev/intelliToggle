@@ -1,56 +1,73 @@
 <template>
-  <section class="bg-[#4A148C] text-white py-16 md:py-24">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center mb-12">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          The First <span class="text-[#FFB84D]">Dart-Native</span> Feature Flag With
-          <span class="text-[#FFB84D]">DartCodeAI</span>
+  <section 
+    class="hero-section text-white py-6 md:py-12 relative overflow-visible"
+  >
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto text-center mb-6 md:mb-8">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight md:leading-[1.5]">
+          The First 
+          <span class="bg-[#F9A71E] px-2 py-1 md:py-2 rounded-md inline-block">
+            <span class="bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent">
+              Dart-Native
+            </span>
+          </span>
+          Feature Flag With
+          <span class="">DartCodeAI</span>
         </h1>
-        <p class="text-xl md:text-2xl mb-4 text-gray-200">
+        <div class="max-w-xl mx-auto"> 
+          <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-2 md:mb-3 text-white font-bold px-2">
           Feature flags built for Dart, Ship faster, roll back safely, and scale with AI-powered delivery
         </p>
-        <p class="text-gray-300 mb-8">Starting at just $1/month</p>
-        <button class="bg-[#FF6B35] hover:bg-[#FF8555] px-8 py-4 rounded-md font-semibold text-lg transition">
-          Join AI Early Access
-        </button>
+        </div>
+        <p class="text-[#F9A71E] mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl font-bold">Starting at just $1/month</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-4">
+          <div class="w-full sm:w-auto">
+            <p class="text-xs sm:text-sm text-gray-300 mb-1.5 sm:mb-1 text-center sm:text-center">Valid till 15th September,2025</p>
+            <button class="w-full sm:w-auto bg-[#F9A71E] hover:bg-[#F9A71E] px-6 sm:px-12 md:px-20 py-2.5 sm:py-2 md:py-1 rounded-md font-semibold text-sm sm:text-base md:text-lg transition">
+              <span class="bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent">
+                Get Access
+              </span>
+            </button>
+          </div>
+          <div class="w-full sm:w-auto sm:pt-6">
+            <button class="w-full sm:w-auto border border-[#F9A71E] hover:bg-[#F9A71E] px-6 sm:px-8 py-2.5 sm:py-2 md:py-1 rounded-md font-semibold text-sm sm:text-base md:text-lg transition">
+              <span class="text-[#F9A71E]">
+                Join AI Early Access
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
       
       <!-- Dashboard Screenshot Placeholder -->
-      <div class="relative max-w-6xl mx-auto">
-        <div class="bg-white rounded-lg shadow-2xl p-4 md:p-8">
-          <div class="bg-gray-50 rounded p-6">
-            <div class="flex flex-col md:flex-row gap-4">
-              <!-- Sidebar -->
-              <div class="w-full md:w-64 bg-[#4A148C] rounded p-4 text-white">
-                <div class="space-y-3">
-                  <div class="font-semibold">Dashboard</div>
-                  <div class="text-sm opacity-80">Feature Flags</div>
-                  <div class="text-sm opacity-80">Experiments</div>
-                  <div class="text-sm opacity-80">Segments</div>
-                  <div class="text-sm opacity-80">Users</div>
-                  <div class="text-sm opacity-80">Settings</div>
-                </div>
-              </div>
-              <!-- Main Content -->
-              <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded border">
-                  <div class="text-2xl font-bold text-gray-800">12</div>
-                  <div class="text-sm text-gray-600">Total Flags</div>
-                </div>
-                <div class="bg-white p-4 rounded border">
-                  <div class="text-2xl font-bold text-gray-800">8</div>
-                  <div class="text-sm text-gray-600">Active Flags</div>
-                </div>
-                <div class="bg-white p-4 rounded border">
-                  <div class="text-2xl font-bold text-gray-800">4</div>
-                  <div class="text-sm text-gray-600">Archived Flags</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="relative max-w-6xl mx-auto pt-8 sm:pt-18 md:pt-48 -mb-16 sm:-mb-24 md:-mb-32 lg:-mb-40">
+        <img :src="heroImage" alt="Hero Image" class="w-full max-w-full h-auto mx-auto object-contain transform scale-100 sm:scale-105 md:scale-110 lg:scale-125">
       </div>
     </div>
   </section>
 </template>
 
+<script setup>
+import { ref } from 'vue'
+import heroImage from '../assets/images/hero-image.png'
+
+</script>
+
+<style scoped>
+.hero-section {
+  background-image: url('/images/hero-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: visible;
+  min-height: 100vh;
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    background-size: cover;
+    background-position: top center;
+    min-height: auto;
+  }
+}
+</style>

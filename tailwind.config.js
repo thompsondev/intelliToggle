@@ -12,7 +12,7 @@ export default {
     extend: {
       colors: {
         'intelli-purple': '#4A148C',
-        'intelli-orange': '#FF6B35',
+        'intelli-orange': '#FFB84D',
         'intelli-yellow': '#FFB84D',
       },
       container: {
