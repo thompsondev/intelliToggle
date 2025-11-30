@@ -55,4 +55,5 @@
 import connectImage from '../assets/images/connect.png'
 import createImage from '../assets/images/create.png'
 import shipImage from '../assets/images/ship.png'
+
 </script>
