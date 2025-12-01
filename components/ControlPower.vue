@@ -1,12 +1,16 @@
 <template>
+  <!-- Control Power Section: Three-Step Process -->
   <section class="py-8 sm:py-12 md:py-16 lg:py-24">
+    <!-- Section Container -->
     <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Heading -->
       <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8 sm:mb-10 md:mb-12">
         Control & Power-focused
       </h2>
+      <!-- Process Cards Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-        <!-- Connect -->
-        <div class="flex flex-col">
+        <!-- Step 1: Connect Card -->
+        <article class="flex flex-col">
           <div class="flex items-center justify-center mb-4 sm:mb-6">
             <img :src="connectImage" alt="Connect" class="w-full h-auto">
           </div>
@@ -17,10 +21,10 @@
               View Documentation
             </button>
           </div>
-        </div>
+        </article>
 
-        <!-- Create Flags -->
-        <div class="flex flex-col">
+        <!-- Step 2: Create Flags Card -->
+        <article class="flex flex-col">
           <div class="flex items-center justify-center mb-4 sm:mb-6">
             <img :src="createImage" alt="Create Flags" class="w-full h-auto">
           </div>
@@ -31,10 +35,10 @@
               View Documentation
             </button>
           </div>
-        </div>
+        </article>
 
-        <!-- Ship & Control -->
-        <div class="flex flex-col sm:col-span-2 md:col-span-1">
+        <!-- Step 3: Ship & Control Card -->
+        <article class="flex flex-col sm:col-span-2 md:col-span-1">
           <div class="flex items-center justify-center mb-4 sm:mb-6">
             <img :src="shipImage" alt="Ship & Control" class="w-full h-auto">
           </div>
@@ -45,7 +49,7 @@
               View Documentation
             </button>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>

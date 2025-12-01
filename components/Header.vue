@@ -1,21 +1,25 @@
 <template>
+  <!-- Header Section: Sticky Navigation Bar -->
   <header class="sticky top-0 z-50 bg-[#42389E] text-white">
+    <!-- Navigation Container -->
     <nav class="container mx-auto px-4 py-8">
+      <!-- Main Navigation Row -->
       <div class="flex items-center justify-between">
-        <!-- Logo -->
+        <!-- Logo Section -->
         <div class="flex items-center space-x-2 flex-1">
           <img :src="logoImage" alt="IntelliToggle" class="h-10 w-auto" />
         </div>
 
-        <!-- Desktop Navigation - Centered -->
-        <div class="hidden md:flex items-center space-x-24 flex-1 justify-center">
-          <a href="#home" class="hover:text-orange-400 transition font-bold text-xl">Home</a>
-          <a href="#about" class="hover:text-orange-400 transition font-regular text-xl">About</a>
-          <a href="#pricing" class="hover:text-orange-400 transition font-regular text-xl">Pricing</a>
-        </div>
+        <!-- Desktop Navigation Links - Centered -->
+        <ul class="hidden md:flex items-center space-x-24 flex-1 justify-center list-none" role="list">
+          <li><a href="#home" class="hover:text-orange-400 transition font-bold text-xl">Home</a></li>
+          <li><a href="#about" class="hover:text-orange-400 transition font-regular text-xl">About</a></li>
+          <li><a href="#pricing" class="hover:text-orange-400 transition font-regular text-xl">Pricing</a></li>
+        </ul>
 
-        <!-- Right Side - Button or Mobile Menu -->
+        <!-- Right Side Actions: Mobile Menu Toggle & CTA Button -->
         <div class="flex items-center justify-end flex-1">
+          <!-- Mobile Menu Toggle Button -->
           <button
             @click="toggleMobileMenu"
             class="md:hidden p-2 focus:outline-none"
@@ -54,9 +58,10 @@
 
     <!-- Mobile Menu -->
     <transition name="slide-right">
-      <div
+      <nav
         v-if="isMobileMenuOpen"
         class="md:hidden fixed inset-0 bg-white h-screen w-full z-50 mobile-menu flex flex-col"
+        aria-label="Mobile navigation menu"
       >
         <!-- Close Button - Top Right -->
         <div class="flex justify-end p-4">
@@ -89,11 +94,11 @@
           </div>
           
           <!-- Navigation Links -->
-          <div class="space-y-6 text-center">
-            <a href="#home" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">Home</a>
-            <a href="#about" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">About</a>
-            <a href="#pricing" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">Pricing</a>
-          </div>
+          <ul class="space-y-6 text-center list-none">
+            <li><a href="#home" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">Home</a></li>
+            <li><a href="#about" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">About</a></li>
+            <li><a href="#pricing" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">Pricing</a></li>
+          </ul>
           
           <!-- Button -->
           <button class="bg-[#F9A71E] hover:bg-[#F9A71E] px-6 py-2 rounded-md font-medium transition mt-8">
@@ -102,7 +107,7 @@
             </span>
           </button>
         </div>
-      </div>
+      </nav>
     </transition>
   </header>
 </template>
