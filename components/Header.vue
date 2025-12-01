@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-[#42389E] text-white">
+  <header class="sticky top-0 z-50 bg-[#42389E] text-white">
     <nav class="container mx-auto px-4 py-8">
       <div class="flex items-center justify-between">
         <!-- Logo -->
@@ -53,26 +53,63 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div
-      v-if="isMobileMenuOpen"
-      class="md:hidden bg-[#4A148C] border-t border-purple-700"
-    >
-      <div class="container mx-auto px-4 py-4 space-y-6">
-        <a href="#home" class="block hover:text-orange-400 transition">Home</a>
-        <a href="#about" class="block hover:text-orange-400 transition">About</a>
-        <a href="#pricing" class="block hover:text-orange-400 transition">Pricing</a>
-        <button class="w-full bg-[#F9A71E] hover:bg-[#F9A71E] px-6 py-2 rounded-md font-medium transition">
-          <span class="bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent">
-            Start Sandbox
-          </span>
-        </button>
+    <transition name="slide-right">
+      <div
+        v-if="isMobileMenuOpen"
+        class="md:hidden fixed inset-0 bg-white h-screen w-full z-50 mobile-menu flex flex-col"
+      >
+        <!-- Close Button - Top Right -->
+        <div class="flex justify-end p-4">
+          <button
+            @click="toggleMobileMenu"
+            class="p-2 focus:outline-none"
+            aria-label="Close menu"
+          >
+            <svg
+              class="w-6 h-6 text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Centered Content -->
+        <div class="flex-1 flex flex-col items-center justify-center px-4 space-y-8">
+          <!-- Logo -->
+          <div class="mb-8">
+            <img :src="blackLogoImage" alt="IntelliToggle" class="h-10 w-auto mx-auto" />
+          </div>
+          
+          <!-- Navigation Links -->
+          <div class="space-y-6 text-center">
+            <a href="#home" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">Home</a>
+            <a href="#about" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">About</a>
+            <a href="#pricing" @click="toggleMobileMenu" class="block bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent font-bold text-xl transition">Pricing</a>
+          </div>
+          
+          <!-- Button -->
+          <button class="bg-[#F9A71E] hover:bg-[#F9A71E] px-6 py-2 rounded-md font-medium transition mt-8">
+            <span class="bg-gradient-to-b from-[#42389E] to-[#0F1026] bg-clip-text text-transparent">
+              Start Sandbox
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
+    </transition>
   </header>
 </template>
 
 <script setup>
 import logoImage from '~/assets/images/logo.png'
+import blackLogoImage from '~/assets/images/black-logo.png'
 
 const isMobileMenuOpen = ref(false)
 
@@ -80,4 +117,27 @@ const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
 }
 </script>
+
+<style scoped>
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-right-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-right-enter-to {
+  transform: translateX(0);
+}
+
+.slide-right-leave-from {
+  transform: translateX(0);
+}
+
+.slide-right-leave-to {
+  transform: translateX(100%);
+}
+</style>
 

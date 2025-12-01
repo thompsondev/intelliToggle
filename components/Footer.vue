@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-100 py-8 sm:py-10 md:py-12">
+  <footer class="bg-gray-100 py-8 sm:py-10 md:py-28">
     <div class="container mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-6 md:gap-4 mb-8 footer-grid">
         <!-- Logo & Copyright -->
@@ -41,7 +41,7 @@
               placeholder="Your email"
               class="w-full sm:w-auto flex-1 px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md sm:rounded-l-md sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-[#4A148C]"
             />
-            <button class="w-full sm:w-auto bg-[#F9A71E] hover:bg-[#F9A71E] px-4 sm:px-6 py-2 rounded-md sm:rounded-l-none sm:rounded-r-md text-black transition flex items-center justify-center gap-2 font-bold text-sm sm:text-base">
+            <button class="w-fit bg-[#F9A71E] hover:bg-[#F9A71E] px-4 sm:px-6 py-2 rounded-md sm:rounded-l-none sm:rounded-r-md text-black transition flex items-center justify-center gap-2 font-bold text-sm sm:text-base">
               Subscribe
             </button>
           </div>
