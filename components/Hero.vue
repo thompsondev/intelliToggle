@@ -8,7 +8,7 @@
       <!-- Hero Text Content -->
       <div class="max-w-5xl mx-auto text-center mb-6 md:mb-8">
         <!-- Main Hero Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight md:leading-[1.5]">
+        <h1 class="text-xl sm:text-2xl md:text-4xl font-bold mb-4 md:mb-6 leading-tight md:leading-[1.5]">
           The First 
           <!-- Highlighted Dart-Native Badge -->
           <span class="bg-[#F9A71E] px-2 py-1 md:py-2 rounded-md inline-block">
