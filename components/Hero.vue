@@ -50,7 +50,7 @@
       </div>
       
       <!-- Hero Dashboard Image: Extends beyond background -->
-      <div class="relative max-w-6xl mx-auto pt-8 sm:pt-18 md:pt-48 -mb-16 sm:-mb-24 md:-mb-32 lg:-mb-40">
+      <div class="relative max-w-6xl mx-auto pt-8 sm:pt-10 md:pt-20 -mb-16 sm:-mb-12 md:-mb-20 lg:-mb-20">
         <img :src="heroImage" alt="Hero Image" class="w-full max-w-full h-auto mx-auto object-contain transform scale-100 sm:scale-105 md:scale-110 lg:scale-125">
       </div>
     </div>
