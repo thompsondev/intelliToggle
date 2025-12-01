@@ -12,9 +12,9 @@
 
         <!-- Desktop Navigation Links - Centered -->
         <ul class="hidden md:flex items-center space-x-24 flex-1 justify-center list-none" role="list">
-          <li><a href="#home" class="hover:text-orange-400 transition font-bold text-xl">Home</a></li>
-          <li><a href="#about" class="hover:text-orange-400 transition font-regular text-xl">About</a></li>
-          <li><a href="#pricing" class="hover:text-orange-400 transition font-regular text-xl">Pricing</a></li>
+          <li><a href="#home" class="hover:text-orange-400 transition font-bold text-lg">Home</a></li>
+          <li><a href="#about" class="hover:text-orange-400 transition font-regular text-lg">About</a></li>
+          <li><a href="#pricing" class="hover:text-orange-400 transition font-regular text-lg">Pricing</a></li>
         </ul>
 
         <!-- Right Side Actions: Mobile Menu Toggle & CTA Button -->
